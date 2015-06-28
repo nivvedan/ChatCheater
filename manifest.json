@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Chat Cheater",
+  "version": "0.1",
+
+  "description": "This Chrome Extension provides shortcuts or \"Cheat Codes\" (the preferred term) for use in Chat Applications",
+  "icons": {
+      "19": "icons/icon19.png",
+      "38": "icons/icon38.png",
+      "96": "icons/icon96.png"
+    },
+
+  "page_action": {
+    "default_icon": {
+      "19": "icons/icon19.png",
+      "38": "icons/icon38.png"
+    },
+    "default_title": "Cheat mode active for this chat"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["js/jquery-min.js", "js/whatsapp.js"]
+    }
+  ],
+
+  "author": "Nivvedan"
+}
