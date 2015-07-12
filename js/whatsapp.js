@@ -1,7 +1,10 @@
-$("html").on("DOMSubtreeModified", "div.block-compose > div.input-container > div.input", function(e) {
+$("html").on("DOMSubtreeModified", "div.block-compose div.input", function(e) {
 		var text = e.target.innerText;
-		if (text.search("/hw ") != -1) {
-			text = text.replace("/hw ", "Hello, World! ")
-			e.target.innerText = text;
-		}
+
+		$.each(shortcuts, function (i, shortcut) {
+			if (text.search("/" + shortcut["shortcut"] + " ") != -1) {
+				text = text.replace("/" + shortcut["shortcut"], shortcut["text"])
+				e.target.innerText = text;
+			}
+		});
 	});

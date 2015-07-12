@@ -1,0 +1,14 @@
+shortcuts = [
+  {
+    "shortcut":"hw",
+    "text":"Hello, World!"
+  },
+  {
+    "shortcut":"shortcut",
+    "text":"This is a shortcut"
+  },
+  {
+    "shortcut":"lines",
+    "text":"Keep adding more lines to this CSV like this"
+  }
+]

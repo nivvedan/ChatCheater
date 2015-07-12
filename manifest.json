@@ -21,7 +21,7 @@
   "content_scripts": [
     {
       "matches": ["https://web.whatsapp.com/*"],
-      "js": ["js/jquery-min.js", "js/whatsapp.js"]
+      "js": ["js/jquery-min.js", "js/whatsapp.js", "data/shortcuts.json"]
     }
   ],
 
